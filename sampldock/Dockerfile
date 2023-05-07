@@ -15,7 +15,7 @@ COPY . .
 RUN dotnet publish -c Release -o  /app
 
 # Start with the .NET Core 6.0 runtime image
-FROM mcr.microsoft.com/dotnet/core/aspnet:6.0
+FROM mcr.microsoft.com/dotnet/aspnet:6.0
 
 # Set the working directory to /app
 WORKDIR /app
