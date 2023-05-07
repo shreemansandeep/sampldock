@@ -1,22 +1,30 @@
-#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
+# Start with the .NET Core 3.1 SDK image
+FROM mcr.microsoft.com/dotnet/core/sdk:6.0 AS build-env
 
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+# Set the working directory to /app
 WORKDIR /app
+
+# Copy the project file and restore dependencies
+COPY sampldock/*.csproj ./
+RUN dotnet restore
+
+# Copy the remaining source code
+COPY . ./
+
+# Build the application
+RUN dotnet publish -c Release -o out
+
+# Start with the .NET Core 3.1 runtime image
+FROM mcr.microsoft.com/dotnet/core/aspnet:6.0
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy the built application from the previous stage
+COPY --from=build-env /app/out .
+
+# Expose port 80
 EXPOSE 80
-EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-WORKDIR /src
-COPY sampldock/sampldock.csproj ./
-RUN dotnet restore "sampldock/sampldock.csproj"
-COPY . .
-WORKDIR "/src/sampldock"
-RUN dotnet build "sampldock.csproj" -c Release -o /app/build
-
-FROM build AS publish
-RUN dotnet publish "sampldock.csproj" -c Release -o /app/publish /p:UseAppHost=false
-
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
+# Start the application
 ENTRYPOINT ["dotnet", "sampldock.dll"]
