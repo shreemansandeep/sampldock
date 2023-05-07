@@ -1,10 +1,8 @@
 # Start with the .NET Core 6.0 SDK image
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
-
-
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 
 # Copy the project file and restore dependencies
-COPY sampldock/sampldock.csproj .
+COPY sampldock/sampldock/sampldock.csproj .
 RUN dotnet restore
 
 # Copy the remaining source code
