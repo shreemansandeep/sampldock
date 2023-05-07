@@ -18,7 +18,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 
 # Copy the built application from the previous stage
-COPY --from=build-env /app .
+COPY --from=build /app .
 
 # Expose port 80
 EXPOSE 80
