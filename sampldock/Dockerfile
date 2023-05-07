@@ -1,5 +1,5 @@
 # Start with the .NET Core 6.0 SDK image
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
 
 # Copy the project file and restore dependencies
 COPY sampldock/sampldock/sampldock.csproj .
@@ -18,7 +18,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 
 # Copy the built application from the previous stage
-COPY --from=build /app .
+COPY --from=build-env /app .
 
 # Expose port 80
 EXPOSE 80
