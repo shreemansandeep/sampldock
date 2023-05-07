@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["sampldock/sampldock.csproj", "sampldock/"]
+COPY ["sampldock/sampldock/sampldock.csproj", "sampldock/"]
 RUN dotnet restore "sampldock/sampldock.csproj"
 COPY . .
 WORKDIR "/src/sampldock"
