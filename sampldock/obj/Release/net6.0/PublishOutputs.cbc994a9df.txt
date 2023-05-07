@@ -1,0 +1,7 @@
+F:\Dotnetproj\sampldock\sampldock\obj\Release\net6.0\PubTmp\Out\sampldock.exe
+F:\Dotnetproj\sampldock\sampldock\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+F:\Dotnetproj\sampldock\sampldock\obj\Release\net6.0\PubTmp\Out\appsettings.json
+F:\Dotnetproj\sampldock\sampldock\obj\Release\net6.0\PubTmp\Out\sampldock.dll
+F:\Dotnetproj\sampldock\sampldock\obj\Release\net6.0\PubTmp\Out\sampldock.deps.json
+F:\Dotnetproj\sampldock\sampldock\obj\Release\net6.0\PubTmp\Out\sampldock.runtimeconfig.json
+F:\Dotnetproj\sampldock\sampldock\obj\Release\net6.0\PubTmp\Out\sampldock.pdb
