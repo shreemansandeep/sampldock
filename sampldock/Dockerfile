@@ -2,7 +2,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
 
 # Copy the project file and restore dependencies
-COPY sampldock/sampldock/sampldock.csproj .
+COPY sampldock.csproj .
 RUN dotnet restore
 
 # Copy the remaining source code
