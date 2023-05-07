@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZsXVUeVHhCS8tDzcgAaV9bqOCgVgzkpKj/lLGdA+Vi7ALatZiz3RsROg4HPfzUnx/l/ki5kq1DEkRvxFs6hlbA==",
+  "success": true,
+  "projectFilePath": "F:\\Dotnetproj\\sampldock\\sampldock\\sampldock.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\shravan\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.2\\microsoft.visualstudio.azure.containers.tools.targets.1.17.2.nupkg.sha512"
+  ],
+  "logs": []
+}
