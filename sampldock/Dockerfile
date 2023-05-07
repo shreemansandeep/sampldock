@@ -1,8 +1,7 @@
 # Start with the .NET Core 6.0 SDK image
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
 
-# Set the working directory to /app
-WORKDIR /src
+
 
 # Copy the project file and restore dependencies
 COPY sampldock/*.csproj .
