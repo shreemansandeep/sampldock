@@ -31,5 +31,11 @@ pipeline{
             }
             }
       
+      stage("Running Multi Containers"){
+            steps{
+                  sh 'cd sampldock && docker-compose up -d'
+            }
+            }
+      
     }
 }
