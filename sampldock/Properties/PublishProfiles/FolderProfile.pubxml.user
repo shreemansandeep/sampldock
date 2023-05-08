@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>F:\Dotnetproj\sampldock\sampldock\bin\Release\net6.0\publish\</_PublishTargetUrl>
-    <History>True|2023-05-07T15:14:01.4270603Z;</History>
+    <History>True|2023-05-08T15:27:53.2745091Z;True|2023-05-07T20:44:01.4270603+05:30;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
