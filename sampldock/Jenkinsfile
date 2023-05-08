@@ -25,11 +25,11 @@ pipeline{
             }
             }
             
-       /* stage("Docker Container Run"){
+        stage("Docker Container Run"){
             steps{
                   sh 'docker run -itd -p 80:80 dockersandheep/$JOB_NAME:v1.$BUILD_ID'
             }
-            } */
+            }
       
       /* stage("Running Multi Containers"){
             steps{
