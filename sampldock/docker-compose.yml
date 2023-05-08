@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  db:
+    container_name: sampldock-db
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - 1433:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=DATAbase88
+  web:
+    container_name: sampldock-app
+    image: dockersandheep/sampldock-dotnet:v1.1
+    ports:
+      - 8001:80
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=sampldb-dotnet.cf445davywns.eu-north-1.rds.amazonaws.com
+      - DB_NAME=sampldb-dotnet
+      - DB_SA_PASSWORD=DATAbase88
